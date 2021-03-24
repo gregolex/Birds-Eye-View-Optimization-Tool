@@ -1,5 +1,7 @@
 ﻿Imports VB = Microsoft.VisualBasic
-Public Class Form1
+Public Class Main
+    
+    'wait function for improved automation
     Public Sub wait(ByVal seconds As Single)
         Static start As Single
         start = VB.Timer()
@@ -8,6 +10,7 @@ Public Class Form1
         Loop
     End Sub
 
+    'automation: Reset internet settings
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim result As Integer = MessageBox.Show("Please close all Internet Browsers for successful automation then press OK.",
         "Close Internet Browsers", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -44,9 +47,9 @@ Public Class Form1
             SendKeys.Send("{LEFT}")
             SendKeys.Send("{ENTER}")
         End If
-
     End Sub
 
+    'automation: Open task manager
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         wait(1)
         Dim process As New Process()
@@ -86,6 +89,7 @@ This process is not fully automated due to Windows internal security features.",
         "Startup Programs Guide", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
+   'automation: Open command prompt
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
         Dim process As New Process()
         process.StartInfo.FileName = "cmd.exe "
@@ -94,6 +98,7 @@ This process is not fully automated due to Windows internal security features.",
         process.Start()
     End Sub
 
+   'Show messagebox
     Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
         MessageBox.Show("Read carefully
 
@@ -112,7 +117,7 @@ Birds Eye View Optimization Tool is designed for Windows 10.
         "Read Me", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
-
+    'Show messagebox for sfc function
     Private Sub Button8_Click(sender As Object, e As EventArgs)
         MessageBox.Show(".
 
