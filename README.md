@@ -10,3 +10,4 @@ How to properly configure Birds-Eye-View-Optimization-Tool:
 7. After cloning is complete select view and select Main.vb
 
 Birds Eye View Optimization Tool uses send keys to automated processes automatically in the same steps a technician would use to optimize a computer system.
+Sendkey algorithms are used for automating processes.
